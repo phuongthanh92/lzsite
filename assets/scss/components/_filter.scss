@@ -1,0 +1,8 @@
+.filter-box {
+  background-color: $light;
+  padding: 10px 13px;
+  margin-bottom: 15px;
+  .form-group:last-child {
+    margin-bottom: 0;
+  }
+}

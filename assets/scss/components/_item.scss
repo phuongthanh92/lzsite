@@ -1,0 +1,48 @@
+.item-in-order {
+  @extend %item--table;
+}
+
+.order-item {
+  background-color: $light;
+  margin-bottom: 15px;
+  .order-item__header {
+    padding: 8px 12px;
+    border-bottom: 1px solid #dadada;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-breakpoint-down(sm) {
+      align-items: flex-end;
+    }
+  }
+
+  .order-item__footer {
+    padding: 12px;
+    font-size: 0.75rem;
+    color: $gray-light;
+    border-top: 1px solid #dadada;
+    span {
+      font-size: 0.875rem;
+    }
+  }
+
+  .order-info__date {
+    font-size: 0.75rem;
+    color: $gray-light;
+  }
+  .item-in-order:not(:last-child) {
+    border-bottom: 1px dashed #dadada;
+  }
+
+  .order-info__status {
+    @include media-breakpoint-up(md) {
+      text-transform: uppercase;
+      color: orange;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 0.75rem;
+      color: $gray-light;
+      font-style: italic;
+    }
+  }
+}

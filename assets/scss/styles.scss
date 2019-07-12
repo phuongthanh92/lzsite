@@ -6,13 +6,16 @@
 @import "base/grid";
 @import "base/buttons";
 @import "base/table";
+@import "base/tab";
 
 /*components*/
 @import "components/card";
 @import "components/box";
+@import "components/filter";
 @import "components/collection";
-@import "components/item";
 @import "components/item--grid";
+@import "components/item--table";
+@import "components/item";
 @import "components/clock";
 @import "components/form";
 
@@ -30,3 +33,4 @@
 /*pages*/
 @import "pages/login";
 @import "pages/profile";
+@import "pages/order";

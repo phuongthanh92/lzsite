@@ -1,0 +1,29 @@
+.tab-links {
+  border-bottom: 2px solid #979797;
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+  li {
+    position: relative;
+    &:after {
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      height: 4px;
+      width: 100%;
+      background-color: transparent;
+      content: "";
+    }
+    a {
+      padding: 10px 20px;
+      display: block;
+      font-size: 13px;
+      color: $gray;
+    }
+    &.active {
+      &:after {
+        background-color: $gray-darker;
+      }
+    }
+  }
+}
