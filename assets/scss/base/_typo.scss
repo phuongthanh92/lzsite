@@ -1,0 +1,20 @@
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: 1.4;
+  font-weight: $font-weight-normal;
+  color: $gray-typo;
+  background: $gray-lightest;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text--right {
+  text-align: right;
+}
+
+.text--left {
+  text-align: left;
+}

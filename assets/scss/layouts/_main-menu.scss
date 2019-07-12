@@ -1,0 +1,140 @@
+.main-menu {
+  font-size: 12px;
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+  a {
+    color: inherit;
+  }
+  .label-menu {
+    color: $blue-darkest;
+  }
+  .main-menu__label {
+    width: 160px;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    i {
+      padding-left: 10px;
+    }
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+.labels-menu {
+  display: flex;
+  justify-content: space-between;
+  .label-menu__item {
+    margin-right: 12px;
+    color: #212121;
+    &:hover {
+      color: $orange;
+    }
+  }
+  .label-menu__icon {
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin: 4px;
+    img {
+      
+    }
+
+  }
+  .label-menu__label {
+    padding-left: 4px;
+    font-size: 1.125rem;
+  }
+  @include media-breakpoint-up(md) {
+    .label-menu__item {
+      display: flex;
+      align-items: center;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .label-menu__item {
+      text-align: center;
+      background-color: transparent !important;
+      &:focus, &:hover {
+        box-shadow: none !important;
+      }
+      .label-menu__icon {
+        width: 54px;
+        height: 54px;
+        margin: 0 auto 6px;
+        padding: 1px 1px 2px 1px;
+        border-radius: 50%;
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,.25);
+        background-color: #ffffff;
+        img {
+          
+        }
+      }
+      .label-menu__label {
+        font-size: 12px;
+        color: $gray-light;
+      }
+    }
+  }
+}
+
+.menu-item {
+  width: 200px;
+}
+
+.main-menu__content {
+  .menu {
+    height: 344px;
+    width: 200px;
+    background-color: #ffffff;
+    list-style: none;
+    padding: 8px 0 12px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, .25);
+    li {
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      i {
+        display: none;
+        color: $orange;
+      }
+      &:hover {
+        > .menu {
+          display: block !important;
+        }
+      }
+      a {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        align-items: center;
+        white-space: nowrap;
+        width: 172px;
+        font-family: $font-weight-medium;
+        font-size: 13px;
+        line-height: 25px;
+        color: $gray;
+        cursor: pointer;
+      }
+      &:hover {
+        > a {
+          color: $orange;
+        }
+        > i {
+          display: block;
+        }
+      }
+    }
+  }
+  .menu:not(.menu--level-1) {
+    position: absolute;
+    top: 0;
+    left: 199px;
+    display: none;
+  }
+}

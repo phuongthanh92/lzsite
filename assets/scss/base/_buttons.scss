@@ -1,0 +1,81 @@
+.btn {
+  display: inline-block;
+  font-size: $font-size-base;
+  line-height: 20px;
+  padding: 10px;
+  transition: all 0.5s;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  &.btn--lg{
+    padding: 14px 10px;
+    font-size: 1.25*$font-size-base;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+}
+
+.btn--full {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.btn--facebook {
+  color: #ffffff;
+  background-color: #3b5998;
+  font-size: 1.125rem;
+  border-radius: $radius-base;
+}
+
+.btn--google {
+  color: #ffffff;
+  background-color: #d34836;
+  font-size: 1.125rem;
+  border-radius: $radius-base;
+}
+
+$colors: (-gray, $gray)
+        (-blue, $blue)
+        (-blue-lighter, $blue-lighter)
+        (-blue-darker, $blue-darker)
+        (-blue-darkest, $blue-darkest)
+        (-red, $red)
+        (-orange, $orange)
+        (-yellow, $orange)
+        (-green, $green);
+
+@each $color, $var in $colors {
+  .btn-#{$color} {
+    background-color: $var;
+    color: #ffffff;
+    border: 1px solid $var;
+    border-radius: $radius-base;
+    &:hover {
+      background-color: #ffffff;
+      color: $var;
+    }
+  }
+
+  .btn--outline#{$color} {
+    color: $var;
+    border: 1px solid $var;
+    &:hover {
+      background-color: $var;
+      color: #ffffff;
+    }
+  }
+  .text-#{$color} {
+    color: $var;
+  }
+}
+
+
+.loadmore {
+  text-align: center;
+  margin: 20px;
+  .btn {
+    max-width: 100%;
+    width: 387px;
+  }
+}

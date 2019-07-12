@@ -1,0 +1,49 @@
+.login-form {
+  max-width: 810px;
+  margin: 0 auto 40px;
+  .form__header {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    margin: 50px 0 15px;
+    .form__link {
+      color: $gray-light;
+      font-size: 0.875rem;
+      a {
+        color: $blue;
+      }
+    }
+  }
+  .form__title {
+    font-size: 1.25rem;
+    margin: 0 15px 0 0;
+  }
+  .form__content {
+    background-color: #ffffff;
+    padding: 25px 50px 30px 25px;
+    form {
+      @include media-breakpoint-up(md) {
+        display: flex;
+        justify-content: space-between;
+        .login-col {
+          max-width: 380px;
+          flex: 1;
+          .btn--lg {
+            margin-top: 10px;
+          }
+          &:nth-child(2) {
+            max-width: 305px;
+            .btn {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 25px;
+    }
+  }
+}

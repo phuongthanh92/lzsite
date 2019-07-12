@@ -1,0 +1,95 @@
+.form-group {
+  margin-bottom: 10px;
+  position: relative;
+  label {
+    font-size: 0.75rem;
+    height: 15px;
+    line-height: 15px;
+    overflow: hidden;
+    color: $gray-typo;
+    display: block;
+    margin-bottom: 5px;
+  }
+  .form-control {
+    border: 1px solid #ddd;
+    font-size: 14px;
+    height: 40px;
+    line-height: 38px;
+    padding: 0 35px 0 10px;
+    margin-bottom: 2px;
+    outline: none;
+    width: 100%;
+  }
+  .close-icon {
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 19px;
+    font-size: 20px;
+    line-height: 24px;
+    cursor: pointer;
+    span {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      background-color: $gray-light;
+      opacity: 0.5;
+      color: #ffffff;
+      border-radius: 50%;
+      text-align: center;
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+  .meta-text {
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+  }
+  .error-description {
+    color: $red;
+    font-size: 0.075rem;
+  }
+  &.form--error {
+    .form-control {
+      border-color: $red;
+    }
+  }
+}
+
+.required {
+  color: $red;
+}
+
+.check-box {
+  input {
+    display: none;
+    & + label {
+      .status {
+        width: 15px;
+        height: 15px;
+        line-height: 13px;
+        border: 1px solid $orange;
+        border-radius: 2px;
+        display: inline-block;
+        margin-right: 5px;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        float: left;
+        &:before {
+          content: "";
+        }
+      }
+    }
+    &:checked + label {
+      .status {
+        text-align: center;
+        background-color: $orange;
+        color: $light;
+        &:before {
+          content: "\f00c";
+        }
+      }
+    }
+  }
+}

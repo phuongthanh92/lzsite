@@ -1,0 +1,43 @@
+.table {
+  @include media-breakpoint-up(md) {
+    td, th {
+      padding: 16px 20px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    td, th{
+      padding: 12px 8px;
+    }
+  }
+  td, th {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+  }
+  th {
+    color: $gray;
+    background-color: $gray-lightest;
+    font-weight: $font-weight-normal;
+    white-space: nowrap;
+  }
+  tr {
+    &:hover {
+      background-color: $gray-lightest;
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid #eff0f5;
+    }
+  }
+}
+
+.table--full {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.table-wrapper--responsive {
+  overflow: auto;
+  .table {
+    min-width: 600px;
+  }
+}
