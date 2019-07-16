@@ -1,0 +1,238 @@
+.lz-shop {
+  background-color: $light;
+  margin-bottom: 15px;
+  .lz-shop__header {
+    padding: 10px;
+    border-bottom: 1px solid #eff0f5;
+    display: flex;
+    justify-content: space-between;
+    .lz-shop__summary, .lz-shop__delivery strong {
+      font-weight: $font-weight-medium;
+      color: $gray-typo-darker;
+    }
+    .check-box {
+      margin-bottom: 0;
+      display: inline-block;
+      label {
+        display: inline-block;
+        margin-bottom: 0;
+      }
+    }
+    a {
+      color: $gray-typo;
+    }
+  }
+  .delivery-charges {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin: 0 10px;
+    .delivery-charges__title {
+      color: $gray-typo-darker;
+      padding-top: 12px;
+      padding-bottom: 8px;
+    }
+    .delivery-charges__body {
+      padding: 10px 10px 10px 30px;
+      border: 1px solid $blue;
+      border-radius: 5px;
+      background-color: $light;
+      position: relative;
+      display: inline-block;
+      .delivery-charges__status {
+        position: absolute;
+        top: 10px;
+        left: 12px;
+        color: $blue;
+      }
+      .delivery-charges__price {
+        font-size: 0.875rem;
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
+
+.item-in-cart {
+  padding: 16px 10px;
+  display: flex;
+  &:not(:last-child) {
+    border-bottom: 1px dashed $gray-lightest;
+  }
+  .meta-text {
+    font-size: 0.75rem;
+    color: $gray-light;
+  }
+  .item__checkbox {
+    padding: 0 10px 0 0;
+    flex: 0 0 40px;
+  }
+  .item__thumb {
+    flex: 0 0 80px;
+    display: flex;
+    img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+    }
+  }
+  .item__info-wrapper {
+    flex: 1 0 0;
+    padding-left: 12px;
+  }
+  .item__title {
+    flex: 0 0 50%;
+    padding: 0 24px 6px 0;
+    a {
+      color: $gray-typo;
+    }
+  }
+
+  .item__price {
+    flex: 0 0 140px;
+    line-height: 1.5;
+    .item__price--current {
+      color: $orange;
+      font-size: 1.125rem;
+      margin-bottom: 5px;
+    }
+    .item__price--old {
+      font-size: 13px;
+      color: $gray-light;
+      margin-bottom: 5px;
+    }
+    .item__price--discount {
+      margin-bottom: 5px  ;
+    }
+  }
+
+  .item__actions {
+    display: flex;
+    [class^="item__actions"] {
+      margin-right: 10px;
+      display: inline-block;
+      cursor: pointer;
+      &:hover {
+        color: $orange;
+      }
+    }
+    &, a {
+      color: $gray-light;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .item__info-wrapper {
+      display: flex;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 10px;
+    .item__info-wrapper {
+      font-size: 0.75rem;
+    }
+    .item__quantity {
+      float: right;
+    }
+    .item__price {
+      float: left;
+      .item__price--current {
+        font-size: 0.75rem;
+        margin-bottom: 0;
+        font-weight: $font-weight-medium;
+      }
+      .item__price--discount, .item__price--old {
+        color: $gray-light;
+        display: inline-block;
+        font-size: 0.75rem;
+      }
+    }
+    .item__actions {
+      display: none;
+    }
+  }
+}
+
+.delivery-box {
+  background-color: $light;
+  padding: 16px 12px 10px;
+  .delivery-box__header {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #eff0f5;
+    font-size: 0.75rem;
+    .meta-text, i {
+      color: $gray-light;
+    }
+    .meta-text {
+      margin-bottom: 11px;
+      font-size: 0.875rem;
+    }
+    .delivery-box__title {
+      display: flex;
+      align-items: center;
+    }
+    i {
+      display: inline-block;
+      margin-right: 8px;
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.summary {
+  &:not(:last-child) {
+    padding-bottom: 16px;
+  }
+  .summary__title {
+    font-size: 1.125rem;
+    margin-bottom: 14px;
+  }
+
+  .summary-item {
+    display: flex;
+    margin-bottom: 16px;
+    align-items: center;
+    i {
+      flex: 0 0 20px;
+      display: block;
+      color: $blue;
+    }
+  }
+  .summary__body {
+    .summary-item--space-between {
+      justify-content: space-between;
+      .summary-item__title {
+        color: $gray-light;
+      }
+      .summary-item__content {
+        font-size: 1.125rem;
+        text-align: right;
+      }
+    }
+  }
+  .summary__footer {
+    .summary-item--space-between {
+      justify-content: space-between;
+      .summary-item__content {
+        text-align: right;
+        font-size: 0.75rem;
+      }
+    }
+    .total {
+      font-size: 1.125rem;
+      color: $orange;
+    }
+  }
+}
+
+.success-notify {
+  font-size: 1.125rem;
+  padding: 40px;
+  margin-bottom: 40px;
+  i {
+    font-size: 5rem;
+    margin-bottom: 30px;
+    color: $green;
+  }
+}

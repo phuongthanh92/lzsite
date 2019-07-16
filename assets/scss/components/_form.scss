@@ -104,3 +104,69 @@
     }
   }
 }
+
+.input--number {
+  display: flex;
+  span {
+    cursor: pointer;
+  }
+  .minus, .plus {
+    width: 34px;
+    height: 34px;
+    background: $gray-lighter;
+    padding: 0 8px;
+    line-height: 34px;
+    border: 1px solid $gray-lighter;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  input {
+    height: 34px;
+    width: 50px;
+    text-align: center;
+    border: 1px solid transparent;
+    display: inline-block;
+    vertical-align: middle;
+    &:hover {
+      border-color: $gray-lighter;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .minus, .plus {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+    }
+    input {
+      width: 40px;
+      line-height: 30px;
+    }
+  }
+}
+
+.apply-form {
+  display: flex;
+  width: 100%;
+  input {
+    height: 38px;
+    line-height: 38px;
+    padding: 0 8px;
+    border: 1px solid #dadada;
+    margin-right: 10px;
+    width: 100%;
+  }
+  button {
+    height: 38px;
+    line-height: 38px;
+    padding: 0 8px;
+    min-width: 104px;
+    color: #ffffff;
+    text-transform: uppercase;
+    flex: 0 0 104px;
+    text-align: center;
+    background-color: $blue;
+    border: none;
+  }
+}

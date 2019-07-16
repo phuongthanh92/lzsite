@@ -1,4 +1,11 @@
 $(document).ready(function () {
+    $('.nav-tab').click(function () {
+        var currentTab = $(this).attr('data-toggle');
+        $('.nav-tabs .nav-tab').removeClass("active");
+        $(this).addClass("active");
+        $(currentTab).parent(".tab-content-wrapper").find('.tab-content').removeClass('active');
+        $(currentTab).addClass('active');
+    });
 
     var header = $('#header');
     if ($(window).width() > 1200) {
